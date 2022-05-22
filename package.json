@@ -1,0 +1,28 @@
+{
+  "name": "stackstream-chatviewer",
+  "version": "1.0.0",
+  "description": "stackstream chat viewer to display chat on livestream",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgohlke/stackstream-chatviewer.git"
+  },
+  "keywords": [
+    "electron",
+    "js",
+    "css",
+    "stackstream"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgohlke/stackstream-chatviewer/issues"
+  },
+  "homepage": "https://github.com/sgohlke/stackstream-chatviewer#readme",
+  "devDependencies": {
+    "electron": "^18.2.4"
+  }
+}
