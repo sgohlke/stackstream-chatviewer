@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>stackstream Chat Viewer!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <style>
+        body, input {
+            color: darkblue;
+        }
+
+        #errorMessage {
+            color: red;
+        }
+
+        #roomId {
+            margin-bottom: 5px;
+        }
+
+        #showChatButton {
+            font-weight: bold;
+        } 
+    </style>
+    <script lang="javascript">
+        function showChat() {
+            const roomId = document.getElementById('roomId').value;
+            if (roomId) {
+                document.getElementById('errorMessage').innerText = ''
+                window.electronAPI.showChat(roomId)
+            } else {
+                document.getElementById('errorMessage').innerText = 'Please enter a roomId, then click on Show Chat'
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to stackstream Chat Viewer</h1>
+    <p>
+        <span>Please enter your RoomId (the part after <b>stack-stream.com/case/</b>) below and click on <b>Show Chat</b>.</span><br /><br />
+        <span id="errorMessage"></span><br />
+        <input id="roomId" type="text" /><br />
+        <input id="showChatButton" type="button" value="Show Chat" onclick="showChat()" /> 
+    </p>
+</body>
+</html>

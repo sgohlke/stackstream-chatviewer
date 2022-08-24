@@ -4,7 +4,9 @@
   "description": "stackstream chat viewer to display chat on livestream",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
@@ -16,13 +18,51 @@
     "css",
     "stackstream"
   ],
-  "author": "",
+  "author": "Stefan Gohlke",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sgohlke/stackstream-chatviewer/issues"
   },
   "homepage": "https://github.com/sgohlke/stackstream-chatviewer#readme",
   "devDependencies": {
-    "electron": "^18.2.4"
+    "@electron-forge/cli": "^6.0.0-beta.65",
+    "@electron-forge/maker-deb": "^6.0.0-beta.65",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.65",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
+    "@electron-forge/maker-zip": "^6.0.0-beta.65",
+    "electron": "^20.0.0"
+  },
+  "overrides": {
+    "@electron/get": "2.0.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "stackstream_chatviewer"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
