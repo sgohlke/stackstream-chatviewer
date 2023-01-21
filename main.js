@@ -32,8 +32,8 @@ function createShowChatWindow(roomId) {
     const contents = electronWindow.webContents
     contents.setAudioMuted(true)
     contents.on('did-finish-load', () => {
-      // Only show chat it div class "str-chat__container"
-      contents.insertCSS('body {visibility:hidden} .str-chat__container { visibility:visible; position:fixed; top: 0px; left: 0px; }')
+      // Only show chat it div class "str-chat__container" (chat view) and "str-chat__thread" (chat thread view)
+      contents.insertCSS('body {visibility:hidden} .str-chat__small-message-input__wrapper{display:none} .str-chat__container, .str-chat__thread { visibility:visible; position:fixed; top: 0px; left: 0px; }')
     })
     //electronWindow.openDevTools()
   }
