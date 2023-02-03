@@ -1,6 +1,6 @@
 {
   "name": "stackstream-chatviewer",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "stackstream chat viewer to display chat on livestream",
   "main": "main.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "@electron-forge/maker-rpm": "6.0.4",
     "@electron-forge/maker-squirrel": "6.0.4",
     "@electron-forge/maker-zip": "6.0.4",
-    "electron": "22.0.3"
+    "electron": "22.2.0"
   },
   "dependencies": {
     "electron-squirrel-startup": "1.0.0"
