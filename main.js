@@ -7,7 +7,7 @@ let electronWindow;
 
 function createWindow() {
   return new BrowserWindow({
-    width: 400,
+    width: 280,
     height: 450,
     backgroundColor: '#FFFFFF',
     alwaysOnTop: true,
@@ -33,7 +33,7 @@ function createShowChatWindow(roomId) {
     contents.setAudioMuted(true)
     contents.on('did-finish-load', () => {
       // Only show chat it div class "str-chat__container" (chat view) and "str-chat__thread" (chat thread view)
-      contents.insertCSS('body {visibility:hidden} .str-chat__small-message-input__wrapper, div.signup-banner {display:none} .str-chat__container, .str-chat__thread { visibility:visible; position:fixed; top: 0px; left: 0px; }')
+      contents.insertCSS('body {visibility:hidden} .str-chat__small-message-input__wrapper, div.signup-banner, #tidio-chat {display:none} .str-chat__container, .str-chat__thread { visibility:visible; position:fixed; top: 0px; left: 0px; }')
     })
     //electronWindow.openDevTools()
   }
