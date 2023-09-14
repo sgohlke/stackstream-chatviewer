@@ -1,4 +1,7 @@
 # stackstream Chat Viewer
+
+**Deprecated** Stackstream was closed in September 2023. This app will no longer be maintained. You can copy/fork this code if you like.
+
 * You want to create a room on [stackstream](https://stack-stream.com/)?
 * You want to keep track of the chat while streaming?
 * You want to show the chat on the same window you are showing content on?
